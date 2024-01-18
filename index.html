@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="saya.jpg" style="width:100%" class="ha">
+  <style>
+  .ha {
+    filter: brightness(50%);
+    transition: filter 0.3s, box-shadow 0.3s;
+  }
+
+  .ha:hover {
+    filter: brightness(100%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Menambahkan efek bersinar 100% */
+  }
+</style>
+
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#gacha" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-random w3-xxlarge"></i>
+    <p>GACHA CARD</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Al - Husein</h1>
+    <style>
+      .w3-jumbo {
+        position: relative;
+        display: inline-block;
+      }
+  
+      .w3-jumbo::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: #ffffff; /* Warna garis bawah */
+        transition: width 0.3s ease;
+      }
+  
+      .w3-jumbo:hover::after {
+        width: 100%;
+        left: 0;
+        animation: slideLeft 0.3s ease;
+      }
+  
+      @keyframes slideLeft {
+        from {
+          left: 50%;
+        }
+        to {
+          left: 0;
+        }
+      }
+    </style>
+    <p> Web Developer and Web Designer.</p>
+    <div class="image-container">
+      <img src="saya.jpg" alt="boy" class="w3-image">
+      <div class="overlay"></div>
+    </div>
+    <style>
+      .image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        overflow: hidden;
+        display: flex;
+      }
+    
+      .w3-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent 50%, black 100%);
+        mix-blend-mode: multiply;
+      }
+    </style>
+
+</header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Maulana Siddiq Al-husein</h2>
+    <hr style="width:400px" class="w3-opacity">
+    <p>Salam! Saya adalah <u><b style="color: #ffffffbb;">Maulana Siddiq Al-Husein</b></u>, seorang <u>desainer web</u> yang memiliki keterampilan dalam menciptakan halaman <u>web responsif.</u> Meskipun saya tidak selalu mengejar proyek tersebut, saya telah mengembangkan kemampuan khusus dalam mendesain tampilan yang menarik dan berfungsi dengan baik. Dengan pengalaman dalam menciptakan halaman web yang responsif, saya menghadirkan kombinasi keahlian teknis dan kecintaan terhadap desain visual.
+        <br><br>Di luar dunia desain web, saya menemukan kegembiraan dalam seni warna dan visual. Kesenangan saya terletak pada mewarnai dan menggambar kartun, di mana saya dapat menyuarakan imajinasi dan kekreatifan saya. Aktivitas ini bukan hanya bentuk ekspresi seni, tetapi juga menjadi cara bagi saya untuk menciptakan karya-karya yang mencerminkan keceriaan dan keunikan. <b style="color: #ffffff75;">Dengan kombinasi keterampilan teknis dan bakat artistik, saya terus menggabungkan kedua dunia ini, menciptakan desain web yang tidak hanya efektif secara fungsional tetapi juga memikat secara visual.</b>
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">Web Design</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Web Developer</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Developer frontend</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>
+    
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">20+</span><br>
+        class
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">10+</span><br>
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">15+</span><br>
+        Sertifikat
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">10+</span><br>
+        Seminar
+      </div>
+    </div>
+
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </button>
+    
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Photos</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+        <style>
+            .w3-half {
+              filter: brightness(50%);
+              overflow: hidden;
+              transition: filter 0.3s;
+            }
+        
+            .w3-half:hover {
+              filter: brightness(100%);
+            }
+        
+            .enlarge:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+          </style>
+      <div class="w3-half">
+        <img src="saya1 (2).jpg" style="width:100%">
+      </div>
+
+      <div class="w3-half">
+        <img src="saya.jpg" style="width:100%">
+      </div>
+  </div>
+  <!-- Gacha Card Section -->
+  <style>
+    .w3-row-padding {
+  margin: 0 -16px;
+}
+
+.w3-quarter {
+  width: 25%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.gacha-card {
+  margin-bottom: 20px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 10px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.flip-card img {
+      width: 100%;
+      filter: brightness(20%);
+      transition: filter 0.5s ease; /* Add transition for smooth brightness change */
+    }
+  
+    .flip-card:hover img {
+      filter: brightness(100%);
+    }
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .w3-quarter {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .w3-quarter {
+    width: 100%;
+  }
+}
+  </style>
+<div class="w3-padding-64 w3-content w3-text-grey" id="gacha">
+  <h2 class="w3-text-light-grey">Gacha Card</h2>
+  <hr style="width:200px" class="w3-opacity">
+  <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="ultra.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="alien.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="gingga.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="max.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="cewetriger.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="download.jpeg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="kris.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="king.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="belial.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="sikatgigi.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="drakzagi.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="geed2.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="noa.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="noa1.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="mebius.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="zero1.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="zero3.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="mebius2.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="legend.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="decker.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="xenon.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="temenMebius.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="z1.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="gacha-card">
+        <div class="flip-card" onclick="flipCard(this)">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="depan.jpg" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+               <img src="temenbelial.jpg" alt="Avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="w3-row-padding" style="margin:0 -16px">
+  <div class="w3-quarter">
+    <div class="gacha-card">
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="depan.jpg" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+             <img src="triger.jpg" alt="Avatar">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-quarter">
+    <div class="gacha-card">
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="depan.jpg" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+             <img src="rbk.jpg" alt="Avatar">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-quarter">
+    <div class="gacha-card">
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="depan.jpg" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+             <img src="orb.jpg" alt="Avatar">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-quarter">
+    <div class="gacha-card">
+      <div class="flip-card" onclick="flipCard(this)">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="depan.jpg" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+             <img src="seven.jpg" alt="Avatar">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .w3-row-padding {
+      margin: 0 -16px;
+    }
+  
+    .w3-margin {
+      margin: 16px 0;
+    }
+  
+    .w3-center {
+      text-align: center;
+    }
+  
+    .w3-jamal {
+      display: inline-block;
+    }
+  
+    .your-card {
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .your-card img {
+      width: 100%;
+      filter: brightness(20%);
+      transition: filter 0.5s ease;
+    }
+
+    .card-tier {
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      color: #fff;
+      font-family: 'PT Serif', serif;
+    }
+  
+    .question-mark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 32em;
+      color: rgba(255, 255, 255, 0.459);
+      font-family: 'PT Serif', serif;
+    }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+
+<div class="w3-row-padding w3-margin w3-center">
+  <h2>Your Card</h2>
+  <div class="w3-jamal">
+    <div class="your-card" id="your-card">
+      <img src="depan.jpg" alt="Avatar">
+      <div class="card-tier" id="card-tier"></div>
+      <div class="question-mark" id="question-mark">?</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const tierMapping = {
+    'cewetriger.jpg': 'Super Rare',
+    'daina.jpg': 'Rare',
+    'king.jpg': 'Mystic',
+    'kris.jpg': 'Legendary Rare',
+    'mebius.jpg': 'Ultra Rare',
+    'max.jpg': 'Rare',
+    'mebius2.jpg': 'Mystic',
+    'noa.jpg': 'Mystic',
+    'noa1.jpg': 'Ultra Rare',
+    'sikatgigi.jpg': 'Limited Edition',
+    'triger.jpg': 'Rare',
+    'temenMebius.jpg': 'Limited Edition',
+    'temenbelial.jpg': 'Ultra Rare',
+    'victory.jpg': 'Rare',
+    'Xenon.jpg': 'Rare',
+    'z1.jpg': 'Super Special Rare',
+    'zero1.jpg': 'Ultra Rare',
+    'legend.jpg': 'Mystic',
+    'geed2.jpg': 'Super Special Rare',
+    'drakzagi.jpg': 'Limited Edition',
+    'download.jpeg': 'Super Special Rare',
+  };
+
+  const yourCard = document.getElementById('your-card');
+  const cardTier = document.getElementById('card-tier');
+
+  yourCard.addEventListener('click', function () {
+    const imageName = yourCard.querySelector('img').getAttribute('src').split('/').pop();
+    const tier = tierMapping[imageName] || 'Common';
+    cardTier.textContent = 'Tier: ' + tier;
+  });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      shuffleBackImages();
+    });
+
+    function shuffleBackImages() {
+      var backImages = document.querySelectorAll('.flip-card-back img');
+      var imagesArray = Array.from(backImages);
+      imagesArray.sort(function () {
+        return 0.5 - Math.random();
+      });
+
+      imagesArray.forEach(function (image, index) {
+        var originalImage = backImages[index];
+        originalImage.src = image.src;
+      });
+    }
+
+    function flipCard(card) {
+      if (!card.classList.contains('is-flipped')) {
+        card.classList.add('is-flipped', 'has-been-clicked');
+        disableClickOnAllCardsExcept(card);
+
+        // Update your card's image and hide the question mark
+        var yourCard = document.getElementById('your-card');
+        var questionMark = document.getElementById('question-mark');
+
+        yourCard.querySelector('img').src = card.querySelector('.flip-card-back img').src;
+        questionMark.style.display = 'none';
+        
+        // Remove brightness filter from clicked gacha card
+        card.querySelector('.flip-card-back img').style.filter = 'brightness(100%)';
+        
+        // Remove brightness filter from your card
+        yourCard.querySelector('img').style.filter = 'brightness(100%)';
+      }
+    }
+
+    function disableClickOnAllCardsExcept(clickedCard) {
+      var cards = document.querySelectorAll('.flip-card');
+      cards.forEach(function (card) {
+        if (card !== clickedCard) {
+          card.onclick = null;
+
+          // Remove brightness filter from other gacha cards
+          card.querySelector('.flip-card-back img').style.filter = 'brightness(100%)';
+        }
+      });
+
+      // Check if the card has been clicked, if yes, remove hover effect
+      if (clickedCard.classList.contains('has-been-clicked')) {
+        clickedCard.style.pointerEvents = 'none';
+      }
+    }
+</script>
+
+
+
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Medan, Indonesia</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +62 895-4011-74533</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: theleaderofenemy@mail.com</p>
+    </div><br>
+  <!-- End Contact Section -->
+  </div>
+ <!-- Tombol Kembali ke Atas -->
+ <style>#scrollBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  transition: opacity 0.3s;
+}
+
+#scrollBtn.show {
+  opacity: 1;
+}
+</style>
+<button onclick="scrollToTop()" class="w3-button w3-light-grey w3-padding-large w3-section" style="display:none;" id="scrollBtn">
+  <i class="fa fa-arrow-up"></i> Kembali ke Atas
+</button>
+
+  
+    <!-- Footer -->
+    <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+      <i class="fa fa-facebook-official w3-hover-opacity" onclick="window.location.href='https://www.facebook.com/your-facebook-profile'"></i>
+      <i class="fa fa-instagram w3-hover-opacity" onclick="window.location.href='https://www.instagram.com/your-instagram-profile'"></i>
+      <i class="fa fa-snapchat w3-hover-opacity" onclick="window.location.href='https://www.snapchat.com/your-snapchat-profile'"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" onclick="window.location.href='https://www.pinterest.com/your-pinterest-profile'"></i>
+      <i class="fa fa-twitter w3-hover-opacity" onclick="window.location.href='https://twitter.com/your-twitter-profile'"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" onclick="window.location.href='https://www.linkedin.com/in/your-linkedin-profile'"></i>
+      <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+      <!-- End footer -->
+  </footer>
+  
+
+<!-- END PAGE CONTENT -->
+</div>
+<script>
+  // Ambil elemen tombol
+var scrollBtn = document.getElementById("scrollBtn");
+
+// Tampilkan tombol saat halaman di-scroll
+window.onscroll = function () {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollBtn.style.display = "block";
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+};
+
+// Fungsi untuk smooth scroll ke atas
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+
+</body>
+</html>
