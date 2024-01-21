@@ -9,37 +9,33 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-  body, h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat", sans-serif;
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="saya.jpg" style="width:100%" class="ha">
+  <style>
+  .ha {
+    filter: brightness(50%);
+    transition: filter 0.3s, box-shadow 0.3s;
   }
 
-  .w3-row-padding img {
-    margin-bottom: 12px;
-  }
-
-  /* Set the width of the sidebar to 120px */
-  .w3-sidebar {
-    width: 120px;
-    background: #222;
-  }
-
-  /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-  #main {
-    margin-left: 120px;
-    background:black;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-
-  /* Remove margins from "page content" on small screens */
-  @media only screen and (max-width: 1000px) {
-    #main {
-      margin-left: 0;
-    }
+  .ha:hover {
+    filter: brightness(100%);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Menambahkan efek bersinar 100% */
   }
 </style>
-
 </head>
 <body class="w3-black">
 
