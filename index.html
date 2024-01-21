@@ -36,24 +36,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     box-shadow: 0 0 20px rgba(255, 255, 255, 1); /* Menambahkan efek bersinar 100% */
   }
 </style>
-</head>
-<body class="w3-black">
-
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="saya.jpg" style="width:100%" class="ha">
-  <style>
-  .ha {
-    filter: brightness(50%);
-    transition: filter 0.3s, box-shadow 0.3s;
-  }
-
-  .ha:hover {
-    filter: brightness(100%);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 1); /
-  }
-</style>
 
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
@@ -199,15 +181,139 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <span class="w3-xlarge">10+</span><br>
         Seminar
       </div>
-    </div>
+    </div><br>
+    <style>
+      .button-container {
+            text-align: center;
+        }
+      .button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+}
 
+.button::before,
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7D8082;
+  transition: all .15s ease;
+}
 
-<button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <a href="https://faizzurhan.github.io/cv-faiz/Profile8.pdf" download="" style="text-decoration:none;color:inherit;">
-      <i class="fa fa-download"></i> Download Resume
-      </a>
-    </button>
-    
+.button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button:active::before,
+.button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.button:active::before {
+  top: 3px;
+}
+
+.button:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all .2s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #ff4655;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.button:hover {
+  color: #0f1923;
+}
+
+.button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.button:hover .button_lg::after {
+  background-color: #fff;
+}
+
+    </style>
+    <div class="button-container">
+      <button class="button">
+          <span class="button_lg">
+              <span class="button_sl"></span>
+              <span class="button_text">Download Resume</span>
+          </span>
+      </button>
+  </div>
   
   <!-- Portfolio Section -->
   <div class="w3-padding-64 w3-content" id="photos">
@@ -828,35 +934,174 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
   </div>
 </div>
-<script>
-    // JavaScript function to refresh the page
-    function refreshPage() {
-      location.reload(true);
-    }
-  </script>
-<button>
-<style>
-.refresh-button {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 1em;
-      font-family: "Montserrat", sans-serif;
-      text-align: center;
-      text-decoration: none;
-      background-color: #4CAF50;
-      color: #fff;
-      border: 1px solid #4CAF50;
-      border-radius: 5px;
+
+
+  <style>
+
+    .button {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      background: none;
+      color: #0f1923;
       cursor: pointer;
-      transition: background-color 0.3s;
+      position: relative;
+      padding: 8px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+      transition: all .15s ease;
     }
 
-    .refresh-button:hover {
-      background-color: #45a049;
+    .button::before,
+    .button::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: calc(50% - 5px);
+      border: 1px solid #7D8082;
+      transition: all .15s ease;
     }
+
+    .button::before {
+      top: 0;
+      border-bottom-width: 0;
+    }
+
+    .button::after {
+      bottom: 0;
+      border-top-width: 0;
+    }
+
+    .button:active,
+    .button:focus {
+      outline: none;
+    }
+
+    .button:active::before,
+    .button:active::after {
+      right: 3px;
+      left: 3px;
+    }
+
+    .button:active::before {
+      top: 3px;
+    }
+
+    .button:active::after {
+      bottom: 3px;
+    }
+
+    .button_lg {
+      position: relative;
+      display: block;
+      padding: 10px 20px;
+      color: #fff;
+      background-color: #0f1923;
+      overflow: hidden;
+      box-shadow: inset 0px 0px 0px 1px transparent;
+    }
+
+    .button_lg::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 2px;
+      background-color: #0f1923;
+    }
+
+    .button_lg::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 4px;
+      height: 4px;
+      background-color: #0f1923;
+      transition: all .2s ease;
+    }
+
+    .button_sl {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: -1px;
+      left: -8px;
+      width: 0;
+      background-color: #ff4655;
+      transform: skew(-15deg);
+      transition: all .2s ease;
+    }
+
+    .button_text {
+      position: relative;
+    }
+
+    .button:hover {
+      color: #0f1923;
+    }
+
+    .button:hover .button_sl {
+      width: calc(100% + 15px);
+    }
+
+    .button:hover .button_lg::after {
+      background-color: #fff;
+    }
+
+    .button:hover .svg-icon {
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+    .button_container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  /* Your existing styles */
+  /* Add the following styles to center the button */
+  display: inline-block;
+}
+
   </style>
-<a href="#" class="refresh-button" onclick="refreshPage()">Refresh</a>
-</button>
+  <div class="button_container">
+    <button class="button" onclick="refreshPage()">
+      <span class="button_lg">
+          <span class="button_sl"></span>
+          <span class="button_text"> <svg class="svg-icon" fill="none" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="currentColor" stroke-linecap="round" stroke-width="1.5">
+          <path d="m3.33337 10.8333c0 3.6819 2.98477 6.6667 6.66663 6.6667 3.682 0 6.6667-2.9848 6.6667-6.6667 0-3.68188-2.9847-6.66664-6.6667-6.66664-1.29938 0-2.51191.37174-3.5371 1.01468"></path>
+          <path d="m7.69867 1.58163-1.44987 3.28435c-.18587.42104.00478.91303.42582 1.0989l3.28438 1.44986"></path>
+      </g>
+  </svg>
+   Refresh</span>
+      </span>
+    </button>
+  </div>
+<script>
+  // JavaScript function to refresh the page
+  function refreshPage() {
+    location.reload();
+  }
+</script>
 
 <script>
   const tierMapping = {
@@ -952,20 +1197,191 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 
 
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
+  <!-- Contact and Skills Section -->
+<br><div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+  <div class="w3-row-padding">
+    <!-- Contact Section - Left Column -->
+    <div class="w3-col m6">
+      <h2 class="w3-text-light-grey">Contact Me</h2>
+      <hr style="width:200px" class="w3-opacity">
+      <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Medan, Indonesia</p>
+        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +62 895-4011-74533</p>
+        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: theleaderofenemy@mail.com</p>
+      </div>
+    </div>
 
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Medan, Indonesia</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +62 895-4011-74533</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: theleaderofenemy@mail.com</p>
-    </div><br>
-  <!-- End Contact Section -->
+    <!-- Skills Section - Right Column -->
+    <div class="w3-col m6">
+      <div class="container">
+        <div class="skill-box">
+          <span class="title">Html</span>
+          <div class="skill-bar">
+            <span class="skill-per html">
+              <span class="tooltip">80%</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <span class="title">JavaScript</span>
+          <div class="skill-bar">
+            <span class="skill-per css">
+              <span class="tooltip">30%</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <span class="title">Css</span>
+          <div class="skill-bar">
+            <span class="skill-per javascript">
+              <span class="tooltip">40%</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="skill-box">
+          <span class="title">C++</span>
+          <div class="skill-bar">
+            <span class="skill-per nodejs">
+              <span class="tooltip">60%</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Your existing CSS styles remain unchanged */
+
+/* Additional styles for the two-column layout */
+.w3-row-padding {
+  margin: 0 -16px;
+}
+
+.w3-col {
+  padding: 0 16px;
+}
+
+@media (max-width: 600px) {
+  .w3-col {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.container {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  background: #ececec33;
+  margin: 0 15px;
+  padding: 10px 20px;
+  border-radius: 7px;
+  user-select: none;
+}
+
+.container .skill-box {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.skill-box .title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.skill-box .skill-bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 6px;
+  background: rgb(255, 255, 255);
+}
+
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 90%;
+  border-radius: 6px;
+  background: #000000;
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+
+.skill-per.html {
+  /*progreso de las diferentes lenguajes*/
+  width: 80%;
+  animation-delay: 0.1s;
+}
+
+.skill-per.css {
+  /*progreso de las diferentes lenguajes*/
+  width: 30%;
+  animation-delay: 0.1s;
+}
+
+.skill-per.javascript {
+  /*progreso de las diferentes lenguajes*/
+  width: 40%;
+  animation-delay: 0.2s;
+}
+
+.skill-per.nodejs {
+  /*progreso de las diferentes lenguajes*/
+  width: 70%;
+  animation-delay: 0.3s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-per .tooltip {
+  position: absolute;
+  right: -14px;
+  top: -28px;
+  font-size: 9px;
+  font-weight: 500;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #000000;
+
+  z-index: 1;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+  background: #000000;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+</style>
+
   </div>
  <!-- Tombol Kembali ke Atas -->
- <style>#scrollBtn {
+ <style>
+ #scrollBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -976,14 +1392,77 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #scrollBtn.show {
   opacity: 1;
 }
+.custom-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0f1923;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgb(255, 255, 255);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.custom-svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.custom-svgIcon path {
+  fill: white;
+}
+
+.custom-button:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #ff4656;
+  align-items: center;
+}
+
+.custom-button:hover .custom-svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.custom-button::before {
+  position: absolute;
+  bottom: 50%; /* Ubah nilai bottom sesuai kebutuhan */
+  left: 50%; /* Tambahkan properti left untuk posisi horizontal */
+  content: "Back to Top";
+  color: white;
+  font-size: 0px;
+  transform: translate(-50%, 50%); /* Tambahkan transform agar teks berada di tengah tombol */
+  opacity: 0; /* Ubah nilai opacity menjadi 0 agar tidak terlihat pada awalnya */
+  transition-duration: 0.3s;
+}
+
+.custom-button:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+
 </style>
-<button onclick="scrollToTop()" class="w3-button w3-light-grey w3-padding-large w3-section" style="display:none;" id="scrollBtn">
-  <i class="fa fa-arrow-up"></i> Kembali ke Atas
+<button class="custom-button" onclick="scrollToTop()" id="scrollBtn" style="display:none;">
+  <svg class="custom-svgIcon" viewBox="0 0 384 512">
+    <path
+      d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+    ></path>
+  </svg>
 </button>
+
 
   
     <!-- Footer -->
-    <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge w3-center">
       <i class="fa fa-facebook-official w3-hover-opacity" onclick="window.location.href='https://www.facebook.com/your-facebook-profile'"></i>
       <i class="fa fa-instagram w3-hover-opacity" onclick="window.location.href='https://www.instagram.com/your-instagram-profile'"></i>
       <i class="fa fa-snapchat w3-hover-opacity" onclick="window.location.href='https://www.snapchat.com/your-snapchat-profile'"></i>
@@ -1010,14 +1489,11 @@ window.onscroll = function () {
     scrollBtn.classList.remove("show");
   }
 };
-
 // Fungsi untuk smooth scroll ke atas
 function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
 </script>
-
 </body>
 </html>
